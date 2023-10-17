@@ -1,0 +1,227 @@
+.product {
+    padding: 0px 5%;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.product .product_image {
+    min-width: 470px;
+    width: 470px;
+    height: 520px;
+    background-color: crimson;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.product .product_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product .product_description .price {
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+.product .product_description {
+    width: 50%;
+}
+
+.product .product_description .price p {
+    font-size: 24px;
+    color: rgb(60, 60, 60);
+
+}
+
+.product .product_description .price .discount {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.product .product_description .color {
+    margin-top: 20px;
+}
+
+.product .product_description .color .color_container {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    gap: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.product .product_description .color .color_container::-webkit-scrollbar {
+    background-color: gainsboro;
+    height: 5px;
+    border-radius: 10px;
+}
+
+.product .product_description .color .color_container::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.product .product_description .color .color_container img {
+    border-radius: 8px;
+    cursor: pointer;
+    width: 150px;
+}
+
+.product .product_description .size {
+    margin-top: 20px;
+}
+
+.product .product_description .size .size_container {
+    display: flex;
+    margin-top: 10px;
+    gap: 8px;
+    flex-wrap: wrap;
+
+}
+
+.product .product_description .size .size_container button {
+    padding: 10px;
+    font-size: 20px;
+    border-color: gainsboro;
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.product .product_description .size .size_container button:hover {
+    background-color: crimson;
+    color: white;
+    border-color: crimson;
+}
+
+.product .product_description .btn {
+    padding: 15px 30px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    width: 300px;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.product .product_description .btn i {
+    margin-right: 10px;
+}
+
+/* RELATED ITEM STYLES */
+
+
+.popular_items {
+    margin-top: 80px;
+    padding: 0px 5%;
+}
+
+.popular_items .content {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    row-gap: 20px;
+}
+
+.card {
+    text-decoration: none;
+}
+
+.card h2 {
+    font-size: 22px;
+    color: rgb(60, 60, 60);
+}
+
+.card .image_container {
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0px 10px; */
+    border-radius: 8px;
+    margin-bottom: 3px;
+    overflow: hidden;
+}
+
+.card .image_container img {
+    width: 100%;
+}
+
+.card .price {
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+.card .price p {
+    font-size: 18px;
+    color: rgb(60, 60, 60);
+
+}
+
+.card .price .discount {
+    text-decoration: line-through;
+    color: gray;
+}
+
+@media screen and (max-width:1200px) {
+    .product .product_description .color .color_container {
+        width: 90%;
+
+    }
+
+
+
+
+}
+
+@media screen and (max-width:900px) {
+    .product .product_image {
+        width: 370px;
+        min-width: 370px;
+        height: 400px ;
+    }
+    .product .product_description p{
+        font-size :14px ;
+    }
+    .product .product_description .color .color_container img{
+        width: 100px;
+    }
+
+}
+@media screen and (max-width:700px) {
+    .popular_items .content{
+        display: flex;
+        overflow: scroll;
+      
+    }
+    .card{
+        min-width: 200px;
+        min-height: 80px;
+    }
+    .product{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .product .product_description  {
+        width: 100%;
+    }
+    .product .product_description h1 {
+        text-align: center;
+    }
+    .product .product_description .price {
+        justify-content: center;
+    }
+}

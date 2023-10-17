@@ -1,0 +1,168 @@
+@import url('https://fonts.cdnfonts.com/css/google-sans');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+@import url('https://fonts.cdnfonts.com/css/hades');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Product Sans', sans-serif;
+}
+
+.logo{
+    font-family: 'hades', sans-serif;
+    text-decoration: none;
+    font-size: 25px;   
+    color: crimson;                                   
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding:0px 20px;
+    height: 70px;
+    align-items: center;
+    border: 1px solid gainsboro;
+}
+
+nav .menu_icon{
+    display: none;
+}
+
+nav .search_container{
+    background-color: whitesmoke;
+    border: 1px solid gainsboro;
+    width: 400px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 50px;
+}
+
+nav .search_container input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding-left: 5px;
+}
+
+nav .more{
+    display: flex;
+    gap: 20px;
+}
+
+nav .more a{
+    text-decoration: none;
+    color: rgb(64, 64, 64);
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .more a i{
+    font-size: 18px;
+}
+
+footer{
+    padding: 20px 5%;
+    padding-top: 70px;
+    margin-top: 70px;
+    background-color: whitesmoke;
+}
+
+footer .content{
+    display: flex;
+    gap: 80px;
+}
+
+footer .content .logo_content{
+    width: 400px;
+}
+
+footer .content ul{
+    list-style: none;
+}
+
+footer .content ul li{
+    margin-top: 15px;
+}
+
+footer .content ul li a{
+    text-decoration: none;
+    color: rgb(64, 64, 64);
+    white-space: nowrap;
+}
+
+footer .content .socials_container{
+    display: flex;
+    gap: 20px;
+    font-size: 27px;
+    margin-top: 15px;
+    width: 100%;
+    justify-content: right;
+}
+
+footer .content .socials_container a{
+    color: rgb(64, 64, 64);
+}
+
+footer .copyright_container{
+    text-align: center;
+    color: gray;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+@media screen and (max-width:900px){
+    footer .content{
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width:730px){
+    nav .search_container{
+        width: 300px    ;
+    }
+
+    footer .content{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    footer .content .logo_content{
+        width: 200px;
+    }
+
+    footer .content .socials_container{
+        grid-column: 1;
+        grid-row: 2;
+        justify-content: left;
+    }
+
+}
+
+@media screen and (max-width:630px){
+    nav .search_container,
+    nav .more{
+        display: none;
+    }
+
+    nav .menu_icon{
+        display: block;
+        font-size: 22px;
+    }
+
+    footer .content{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    footer .content .socials_container{
+        grid-row: 5;
+    
+    }
+}
